@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "stable"
+services:
+  - mongoose
 notifications:
   email:
     - "muet.sw26@yahoo.com"
