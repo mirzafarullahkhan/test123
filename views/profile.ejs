@@ -1,0 +1,59 @@
+<% include templates/header.ejs %>
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/myscripts.js"></script>
+
+        <div class="container">
+
+                <div class="row">
+                        <div class="col-lg-6">
+                                <label>Name:</label>
+                                <%= userdata.display_name %>
+                                        <br/>
+                                        <label>Game Win:</label>
+                                        <%= userdata.win %>
+                                                <br/>
+                                                <label>Game Lose:</label>
+                                                <%= userdata.lose %>
+                                                <br/>
+                        </div>
+                        <div class="col-lg-6">
+                                <div class="col-lg-4">
+                                        <label>Kick Power:</label>
+                                        <br/>
+                                        <label>Punch Power:</label>
+                                        <br/>
+                                        <label>Speed Power:</label>
+                                        <br/>
+                                </div>
+                                <div class="col-lg-8">
+                                        <img src="images/mal1.png" alt="" width="150" height="200">
+                                </div>
+                                <div class="col-lg-12">
+                                        <button name="start_game" value="">Start Game</button>
+                                </div>
+                        </div>
+                </div>
+
+        </div>
+
+        <div class="container">
+
+                <div class="bd-example">
+                        <h2>SELECT PLAYER</h2>
+                        <div class="row text-center text-lg-left">
+
+                                <% for(var i=0; i<gameCharacters.length; i++){ %>
+                                        <div class="character img col-lg-4">
+                                                <a href="#">
+                                                        <img src=<%= gameCharacters[i].image_src %> alt="" width="130" height="160">
+                                                </a>
+                                        </div>
+                                        <% } %>
+
+                        </div>
+
+                </div>
+        </div>
+
+
+<% include templates/footer.ejs %>
